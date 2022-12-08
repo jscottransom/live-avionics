@@ -5,5 +5,4 @@ pub async fn run() -> Result<String, reqwest::Error> {
     let data = pull_data(api_key).await;
 
     Ok(data.unwrap())
-
 }
