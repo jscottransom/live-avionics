@@ -1,4 +1,4 @@
-# live-avionics
+# live-flights
 Phased, real-time flight information Application
 
 # Phase 1
