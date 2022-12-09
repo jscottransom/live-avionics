@@ -1,5 +1,5 @@
-use liveavionics::handler::run;
-use liveavionics::configuration::get_configuration;
+use liveflights::handler::run;
+use liveflights::configuration::get_configuration;
 use mongodb::{bson::doc, options::ClientOptions, Client};
 
 

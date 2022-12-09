@@ -1,5 +1,5 @@
 [package]
-name = "liveavionics"
+name = "liveflights"
 version = "0.1.0"
 edition = "2021"
 
@@ -14,3 +14,4 @@ reqwest = { version = "0.11.13", features = ["json"] }
 serde = { version = "1.0.147", features = ["derive"] }
 structopt = "0.3.21"
 tokio = { version = "1.21.2", features = ["full"] }
+time = "0.3.15"
