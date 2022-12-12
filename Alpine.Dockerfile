@@ -6,19 +6,22 @@ COPY ./Cargo.lock ./Cargo.lock
 COPY ./Cargo.toml ./Cargo.toml
 COPY ./configuration.yaml ./configuration.yaml
 COPY .env .env
-RUN cargo clean
+RUN sudo chmod -R 777 .
+RUN cargo update
 RUN cargo build --release
 RUN rm src/*.rs
 
 ADD . ./
 RUN sudo chmod -R 777 .
 RUN rm ./target/x86_64-unknown-linux-musl/release/deps/liveflights*
+RUN sudo chmod -R 777 .
+RUN cargo update
 RUN cargo build --release
 
 FROM alpine:latest
 ARG APP=/usr/src/app
 
-EXPOSE 8000
+# EXPOSE 8000
 
 ENV TZ=Etc/UTC \
     APP_USER=appuser
