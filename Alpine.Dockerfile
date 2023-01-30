@@ -1,4 +1,4 @@
-FROM ekidd/rust-musl-builder as builder
+FROM ekidd/rust-musl-builder:latest as builder
 
 RUN USER=root cargo new --bin live-flights
 WORKDIR ./live-flights
@@ -39,5 +39,7 @@ RUN chown -R $APP_USER:$APP_USER ${APP}
 
 USER $APP_USER
 WORKDIR ${APP}
+
+# CMD ["ls ./live-flights"]
 
 CMD ["./live-flights"]

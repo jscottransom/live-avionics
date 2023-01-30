@@ -1,6 +1,6 @@
 #[derive(serde::Deserialize)]
 pub struct Settings {
-    pub database: DatabaseSettings
+    pub database: DatabaseSettings,
 }
 
 // All fields within the Setting struct need to be deserializable in order for the entire struct to be
